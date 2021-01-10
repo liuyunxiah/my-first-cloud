@@ -1,0 +1,4 @@
+com\cloud\consumer\SwaggerConfig.class
+com\cloud\consumer\ApplicationContextConfig.class
+com\cloud\consumer\controller\PaymentComtroller.class
+com\cloud\consumer\OrderApplication.class
