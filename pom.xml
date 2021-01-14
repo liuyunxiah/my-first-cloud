@@ -23,6 +23,7 @@
     <module>order</module>
     <module>common</module>
     <module>Eureka-server</module>
+    <module>Eureka-server-7002</module>
   </modules>
   <!-- 模块名字 -->
   <name>cloud-demo</name>

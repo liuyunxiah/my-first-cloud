@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/consumer/payment")
 public class PaymentComtroller {
 
-    private static String PAYMENT_URL = "http://127.0.0.1:8090/";
+    private static String PAYMENT_URL = "http://127.0.0.1:8081/";
     @Autowired
     private RestTemplate restTemplate;
 
