@@ -10,3 +10,6 @@ eureka:
       # 设置与eureka service 交互的url地址
       defaultZone: http://eureka7002.com:7002/eureka/ #集群:相互注册
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ 单机版
+  server:
+    enable-self-preservation: true #自我保护机制开关
+    eviction-interval-timer-in-ms: 0 #检查失效服务的时间

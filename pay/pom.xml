@@ -12,6 +12,12 @@
     <artifactId>pay</artifactId>
 
     <dependencies>
+
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
         <!-- common -->
         <dependency>
             <groupId>org.example</groupId>

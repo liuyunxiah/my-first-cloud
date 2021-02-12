@@ -3,7 +3,6 @@ package com.cloud.consumer.pay.controller;
 import com.cloud.common.domain.CommonResult;
 import com.cloud.common.domain.Payment;
 import com.cloud.consumer.pay.service.PaymentService;
-import com.netflix.discovery.converters.Auto;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +10,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Iterator;
 import java.util.List;
 
 @RestController
