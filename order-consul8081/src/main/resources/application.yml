@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: consul-order-service8081
+  cloud:
+    consul:
+      discovery:
+        service-name: ${spring.application.name}
+        instance-id: ${spring.application.name}:${server.port}
+      host: 127.0.0.1
+      port: 8500

@@ -18,6 +18,9 @@ public class PaymentComtroller {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Value("${server.port}")
+    private String servicePort;
+
     @PostMapping
     public CommonResult addPayment(@RequestBody Payment payment){
         return restTemplate.postForObject(PAYMENT_URL + "payment/", payment, CommonResult.class);

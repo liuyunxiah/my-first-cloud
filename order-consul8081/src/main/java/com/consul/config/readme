@@ -1,0 +1,6 @@
+AP:Eureka
+CP:Kookepper/Consul
+
+C 一致性
+A 高可用
+P 分区容错
