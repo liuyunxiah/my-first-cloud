@@ -1,0 +1,8 @@
+服务注册中心
+Eureka
+Zookepper
+Consul
+Nacos
+
+负载均衡
+Ribbon 负载均衡+RestTemplete调用
