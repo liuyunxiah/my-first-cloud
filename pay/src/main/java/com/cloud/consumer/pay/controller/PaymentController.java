@@ -35,7 +35,7 @@ public class PaymentController {
 
     @GetMapping("/{id}")
     @ApiOperation(value="查询id")
-    public CommonResult selectPaymentById(@PathVariable Long id){
+    public CommonResult selectPaymentById(@PathVariable(value = "id") Long id){
         log.info("****"+servicePort);
         Payment payment = paymentService.selectPaymentById(id);
         return CommonResult.success().setData(payment);

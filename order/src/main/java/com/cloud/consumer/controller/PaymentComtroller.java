@@ -27,7 +27,7 @@ public class PaymentComtroller {
     }
 
     @GetMapping("/{id}")
-    public CommonResult selectPaymentById(@PathVariable Long id){
+    public CommonResult selectPaymentById(@PathVariable(value = "id") Long id){
         log.info("查询"+servicePort);
         System.out.println(servicePort);
         return restTemplate.getForObject(PAYMENT_URL + "payment/" + id, CommonResult.class);

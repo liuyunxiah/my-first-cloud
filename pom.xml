@@ -28,6 +28,7 @@
     <module>pay-zookepper8003</module>
     <module>pay-consul8006</module>
     <module>order-consul8081</module>
+      <module>order-openFeign8082</module>
   </modules>
   <!-- 模块名字 -->
   <name>cloud-demo</name>
