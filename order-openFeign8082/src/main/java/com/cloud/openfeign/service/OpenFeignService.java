@@ -12,4 +12,7 @@ public interface OpenFeignService {
 
     @GetMapping(value = "/payment/{id}")
     CommonResult selectPaymentById(@PathVariable(value = "id") Long id);
+
+    @GetMapping("/payment/timeout")
+    void timeout();
 }

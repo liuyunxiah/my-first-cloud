@@ -41,6 +41,16 @@ public class PaymentController {
         return CommonResult.success().setData(payment);
     }
 
+    @GetMapping("/timeout")
+    public void timeout(){
+        //http://localhost:8081/payment/timeout
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     //服务发现
     @GetMapping("/discoveryclient")

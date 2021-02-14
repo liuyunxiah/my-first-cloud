@@ -20,4 +20,10 @@ public class OpenFeignController {
         return CommonResult.success().setData(result);
     }
 
+    @GetMapping("/consumer/openfeign/timeout")
+    public void timeout(){
+        //http://localhost:8082/consumer/openfeign/timeout
+        openFeignService.timeout();
+    }
+
 }

@@ -35,4 +35,13 @@ public class PaymentController {
         return CommonResult.success().setData(payment);
     }
 
+    @GetMapping("/timeout")
+    public void timeout(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
