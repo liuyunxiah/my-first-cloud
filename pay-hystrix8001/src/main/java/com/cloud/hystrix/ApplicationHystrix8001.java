@@ -1,16 +1,14 @@
-package com.cloud.openfeign;
+package com.cloud.hystrix;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@EnableEurekaClient
-@EnableFeignClients
-public class Application8082 {
+@EnableCircuitBreaker //开启熔断器 @EnableHystrix
+public class ApplicationHystrix8001 {
     public static void main(String[] args) {
-        SpringApplication.run(Application8082.class, args);
+        SpringApplication.run(ApplicationHystrix8001.class, args);
     }
 }

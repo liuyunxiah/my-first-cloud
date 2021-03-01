@@ -29,6 +29,8 @@
     <module>pay-consul8006</module>
     <module>order-consul8081</module>
       <module>order-openFeign8082</module>
+      <module>pay-hystrix8001</module>
+      <module>order-openFeign-hystrix8083</module>
   </modules>
   <!-- 模块名字 -->
   <name>cloud-demo</name>
@@ -72,15 +74,6 @@
   </dependencyManagement>
 
   <dependencies>
-
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-      <version>2.3.3.RELEASE</version>
-    </dependency>
-
-
     <!-- springboot -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -127,9 +120,15 @@
       <version>1.7.0.RELEASE</version>
     </dependency>
 
+    <!--web-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+      <version>2.3.3.RELEASE</version>
     </dependency>
 
     <dependency>

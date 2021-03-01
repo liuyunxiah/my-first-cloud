@@ -1,11 +1,11 @@
 server:
-  port: 8082
+  port: 8083
 spring:
   application:
-    name: cloud-order-service-openfeign
+    name: cloud-order-service-openfeign-hystrix
 eureka:
   client:
-    register-with-eureka: true #注册进eureka
+    register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:7001/eureka  #单机版
@@ -13,6 +13,6 @@ eureka:
 ribbon:
   ReadTimeout: 5000 # 超时配置
   ConnectTimeout: 5000
-logging: #日志配置
-  level:
-    com.cloud.openfeign.service.OpenFeignService: debug
+feign:
+  hystrix:
+    enabled: true
