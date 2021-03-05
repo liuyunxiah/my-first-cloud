@@ -31,6 +31,8 @@
       <module>order-openFeign8082</module>
       <module>pay-hystrix8001</module>
       <module>order-openFeign-hystrix8083</module>
+    <module>pay-nacos8001</module>
+      <module>order-nacos8081</module>
   </modules>
   <!-- 模块名字 -->
   <name>cloud-demo</name>
@@ -151,6 +153,7 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
 
     <dependency>
       <groupId>org.apache.maven.plugins</groupId>
