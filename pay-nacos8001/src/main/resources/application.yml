@@ -2,7 +2,7 @@ server:
   port: 8001
 spring:
   application:
-    name: cloud-payment-nacos-service8001
+    name: cloud-payment-nacos-service
     cloud:
       nacos:
         discovery:

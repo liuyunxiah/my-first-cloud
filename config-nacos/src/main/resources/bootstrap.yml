@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+#    refresh:
+#      enabled: false # 开启自动刷新配置
+  application:
+    name: nacos-config
+server:
+  port: 8080
+
+  # DataId为的基本配置${spring.application.name}-${profile}. ${file-extension:properties}
+  # nacos-config-dev.yaml
