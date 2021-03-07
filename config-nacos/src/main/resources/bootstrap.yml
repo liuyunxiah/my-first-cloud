@@ -4,7 +4,11 @@ spring:
       config:
         server-addr: localhost:8848
         file-extension: yaml
-#    refresh:
+        group: PRO_GROUP
+        namespace: 112d95da-99de-4120-a7ad-4d1160ecbe9d #命名空间
+      discovery:
+        server-addr: localhost:8848
+  #    refresh:
 #      enabled: false # 开启自动刷新配置
   application:
     name: nacos-config

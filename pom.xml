@@ -33,6 +33,7 @@
       <module>order-openFeign-hystrix8083</module>
     <module>pay-nacos8001</module>
       <module>order-nacos8081</module>
+    <module>config-nacos</module>
   </modules>
   <!-- 模块名字 -->
   <name>cloud-demo</name>
