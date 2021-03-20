@@ -12,3 +12,11 @@ spring:
         dashboard: localhost:8080 #sentinel地址
         port: 8719 #默认端口
       web-context-unify: false  # 限流 链路 配置
+      datasource:
+        ds1:
+          nacos:
+            server-addr: localhost:8848 #Nacos注册地址
+            dataId: cloud-sentinel-server
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow

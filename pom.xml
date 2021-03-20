@@ -34,6 +34,7 @@
     <module>pay-nacos8001</module>
       <module>order-nacos8081</module>
     <module>config-nacos</module>
+      <module>cloud-sentinel-server</module>
   </modules>
   <!-- 模块名字 -->
   <name>cloud-demo</name>
