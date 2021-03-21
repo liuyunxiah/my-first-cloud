@@ -2,8 +2,6 @@ package com.seata.order.service;
 
 import com.cloud.common.domain.CommonResult;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
