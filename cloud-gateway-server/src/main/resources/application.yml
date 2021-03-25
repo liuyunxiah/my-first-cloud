@@ -1,0 +1,27 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      routes:
+#        - id: after_route
+#          uri: http://localhost:8001
+#          predicates:
+#            - Path=/payment/nacos/**
+        - id: after_route2
+          uri: lb://cloud-payment-nacos-service
+          predicates:
+            - Path=/payment/nacos/**
+      discovery:
+        locator:
+          enabled: true
+  application:
+    name: cloud-gateway-server
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
