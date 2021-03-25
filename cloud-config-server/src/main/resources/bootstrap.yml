@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liuyunxiah/cloud-config-repo.git #使用file:前缀，它应该在本地存储库中工作
+#          basedir: target/config
+#          search-paths: /
+          skip-ssl-validation: true
+          timeout: 5
+          default-label: main
+        accept-empty: true #在未找到应用程序的情况下Server返回HTTP 404状态。默认情况下，此标志设置为true。
+      #          username: liuyunxiah #公开无需填写
+      #          password: 19961028yunxia

@@ -1,0 +1,15 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: cloud-config-client
+#  cloud:
+#    config:
+#      label: master
+#      profile: dev
+#      uri: http://localhost:8888
+#  profiles:
+#    active: dev
+
+
+# spring.config.import=optional:configserver:http://myconfigserver.com 启动方式

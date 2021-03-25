@@ -40,6 +40,8 @@
       <module>cloud-seata-account</module>
     <module>cloud-hystrix-dashboard</module>
       <module>cloud-gateway-server</module>
+      <module>cloud-config-server</module>
+      <module>cloud-config-client</module>
   </modules>
   <!-- 模块名字 -->
   <name>cloud-demo</name>
