@@ -1,5 +1,7 @@
 server:
   port: 8001
+#  servlet:
+#    context-path: /cloud-payment-nacos-service
 spring:
   application:
     name: cloud-payment-nacos-service
@@ -7,11 +9,11 @@ spring:
       nacos:
         discovery:
           server-addr: localhost:8848
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: *
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 
 
