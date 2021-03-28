@@ -1,20 +1,11 @@
 server:
-  port: 8083
+  port: 8084
 spring:
   application:
-    name: cloud-config-client
+    name: cloud-config-client-8084
   rabbitmq: #  #rabbitmq相关配置：15672是Web管理界面的端口；5672是MQ的访问端口 消息总线bus
     host: localhost
     port: 5672
     username: guest
     password: guest
-#  cloud:
-#    config:
-#      label: master
-#      profile: dev
-#      uri: http://localhost:8888
-#  profiles:
-#    active: dev
-
-
 # spring.config.import=optional:configserver:http://myconfigserver.com 启动方式

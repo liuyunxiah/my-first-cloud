@@ -4,6 +4,7 @@ spring:
       uri: http://localhost:8888 #服务端地址
       label: main
       profile: dev
+      name: cloud-config-client
 management:
   endpoints:
     web:

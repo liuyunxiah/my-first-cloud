@@ -2,10 +2,15 @@ server:
   port: 8888
 
 spring:
+  rabbitmq: #  #rabbitmq相关配置：15672是Web管理界面的端口；5672是MQ的访问端口 消息总线bus
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   application:
     name: cloud-config-server
 management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: 'bus-refresh' # 总线刷新端点

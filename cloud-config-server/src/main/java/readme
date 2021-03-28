@@ -1,0 +1,14 @@
+1.服务器
+2.客户端(不采用)
+全局刷新:
+
+curl -X POST http://localhost:8888/actuator/bus-refresh
+
+差异化处理:
+
+curl -X POST http://localhost:8888/actuator/bus-refresh/cloud-config-client:8083
+
+
+备注:
+测试地址:
+http://localhost:8888/cloud-config-client-dev.yml
