@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    stream:
+      binders:
+        defaultRabbit: #绑定消息中间件的名称，自定义
+          type: rabbit                      #绑定消息中间件的类型，固定值
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      bindings:
+        input:
+          destination: mydestination    #表示要使用的exchange名称定义
+          content-type: application/json    #表示要接收的消息类型，文本则设置"text/plain"
+          binder: defaultRabbit
+          group: mygroup
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  application:
+    name: cloud-stream-consumer
+
+server:
+  port: 8082

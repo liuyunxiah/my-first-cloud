@@ -43,6 +43,8 @@
       <module>cloud-config-server</module>
       <module>cloud-config-client</module>
       <module>cloud-config-client-copy</module>
+    <module>cloud-stream-producer</module>
+      <module>cloud-stream-consumer</module>
   </modules>
   <!-- 模块名字 -->
   <name>cloud-demo</name>
