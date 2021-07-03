@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,6 +17,8 @@ public class RedisServiceImpl implements RedisService {
 
     @Autowired
     private TestMapper mapper;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     //缓存填充
     @Override
@@ -29,7 +32,7 @@ public class RedisServiceImpl implements RedisService {
     @CachePut(value = "payment", key = "#payment.id")
     public Payment insert(Payment payment) {
         System.out.println("走了数据库方法......");
-        mapper.save(payment);
+        int id = mapper.save(payment);
         return mapper.selectPaymentById(payment.getId());
     }
 
@@ -47,4 +50,6 @@ public class RedisServiceImpl implements RedisService {
         System.out.println("走了数据库方法......");
         return mapper.delete(id);
     }
+
+
 }

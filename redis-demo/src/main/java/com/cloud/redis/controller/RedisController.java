@@ -3,11 +3,11 @@ package com.cloud.redis.controller;
 import com.cloud.common.domain.CommonResult;
 import com.cloud.common.domain.Payment;
 import com.cloud.redis.PaymentDTO;
-import com.cloud.redis.mapper.TestMapper;
 import com.cloud.redis.service.RedisService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,6 +16,8 @@ public class RedisController {
 
     @Autowired
     private RedisService redisService;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @GetMapping("/{id}")
     @ApiOperation(value="查询id")
@@ -47,6 +49,13 @@ public class RedisController {
     public CommonResult update(@PathVariable(value = "id") Long id){
         redisService.update(id);
         return CommonResult.success();
+    }
+
+    //从redis中取数据
+    @GetMapping("/r/{id}")
+    @ApiOperation(value="r 查询id")
+    public String getId(@PathVariable(value = "id") String id){
+        return stringRedisTemplate.opsForValue().get(id);
     }
 
 }
