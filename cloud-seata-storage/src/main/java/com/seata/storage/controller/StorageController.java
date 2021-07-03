@@ -2,6 +2,7 @@ package com.seata.storage.controller;
 
 import com.cloud.common.domain.CommonResult;
 import com.seata.storage.service.StorageService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/seata/storage")
+@Api(value = "storageController", tags = "st")
 public class StorageController {
 
     @Autowired

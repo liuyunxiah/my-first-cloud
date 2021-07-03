@@ -1,7 +1,7 @@
 package com.seata.account.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.mapstruct.Mapper;
 
 import java.math.BigDecimal;
 

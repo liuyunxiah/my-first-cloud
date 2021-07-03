@@ -17,13 +17,11 @@ public class AccountServiceImpl implements AccountService {
     private AccountMapper accountMapper;
 
     @Override
-    public void debit(String userId, BigDecimal money) {
+    public void debit(String userId, BigDecimal money)  {
 
-        try {
-            TimeUnit.SECONDS.sleep(20);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         accountMapper.debit(userId, money);
+        if(true){
+            throw new RuntimeException("错了");
+        }
     }
 }

@@ -5,12 +5,15 @@ import com.cloud.common.domain.CommonResult;
 import com.seata.order.domain.Order;
 import com.seata.order.dto.OrderCreator;
 import com.seata.order.service.OrderService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/seata/order")
+@Api(value = "orderController", tags = {"dd"})
 public class OrderController {
 
     @Autowired
